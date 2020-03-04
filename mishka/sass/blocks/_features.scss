@@ -1,0 +1,241 @@
+
+.features {
+    width: 260px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 27px auto 36px;
+
+    background-color: $white;
+
+    @media (min-width: $tablet-width) {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 668px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 38px;
+        margin-bottom: 52px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 1050px;
+        margin-top: 116px;
+        margin-bottom: 74px;
+    }
+}
+
+.features__header {
+    margin-bottom: 24px;
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 49px;
+    }
+
+    @media (min-width: $desktop-width) {
+        justify-content: flex-start;
+
+        margin-bottom: 49px;
+
+        z-index: 10;
+    }
+}
+
+.features__title {
+    @include font(25px, 30px);
+
+    margin-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+        @include font(43px, 50px);
+
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        @include font(53px, 57px);
+    }
+}
+
+.features__subtitle {
+    @include font(17px, 20px);
+
+    color: $primary;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        margin-right: 27px;
+        margin-top: 4px;
+
+        flex-basis: 10%;
+
+        line-height: 1;
+
+        text-align: center;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-right: 36px;
+        margin-top: 9px;
+        margin-left: 30px;
+
+        order: -1;
+    }
+}
+
+.features__text {
+    @include font(15px, 24px);
+
+    margin-bottom: 16px;
+
+    letter-spacing: .1px;
+
+    @media (min-width: $tablet-width) {
+        @include font(17px, 30px);
+
+        width: 284px;
+        margin-bottom: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 49px;
+        padding-left: 175px;
+    }
+}
+
+.features__table {
+    @include font(15px, 20px);
+    width: 100%;
+    margin-bottom: 26px;
+
+    border-collapse: collapse;
+
+    @media (min-width: $tablet-width) {
+        width: 284px;
+        margin-bottom: 54px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 107px;
+        margin-left: 175px;
+    }
+}
+
+.features__row {
+    @media (min-width: $tablet-width) {}
+
+    @media (min-width: $desktop-width) {}
+}
+
+.features__col {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid $secondary;
+
+    &--properties {
+        padding-right: 11px;
+    }
+
+    @media (min-width: $tablet-width) {
+        &--properties {
+            padding-right: 0;
+        }
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.features__img {
+    display: block;
+    margin-bottom: 24px;
+
+    @media (min-width: $tablet-width) {
+        @include pseudo();
+
+        bottom: 2px;
+        right: 50px;
+
+        width: 333px;
+        height: 404px;
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        bottom: 0;
+
+        width: 525px;
+        height: 636px;
+    }
+}
+
+.features__buy {
+    @media (min-width: $tablet-width) {
+        width: 333px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding-left: 175px;
+    }
+}
+
+.features__price {
+    @include font(17px, 24px, 700);
+
+    margin-bottom: 26px;
+
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+        @include font(20px, 24px);
+
+        margin-bottom: 34px;
+        margin-left: 72px;
+
+        text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.features__price-text {
+    @media (min-width: $tablet-width) {}
+
+    @media (min-width: $desktop-width) {}
+}
+
+.features__btn {
+    @include font(17px, 20px, 700);
+
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    border: 2px solid $colorLine;
+
+    transition: background .2s linear,
+                color .2s linear;
+
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $colorLine;
+    }
+
+    &:active {
+        color: darken($white, 30%);
+    }
+
+    @media (min-width: $tablet-width) {
+        width: 292px;
+    }
+
+    @media (min-width: $desktop-width) {}
+}

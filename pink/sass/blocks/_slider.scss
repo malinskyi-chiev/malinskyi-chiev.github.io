@@ -1,0 +1,67 @@
+.slider {
+    @media (min-width: $tablet-width) {}
+    @media (min-width: $desktop-width) {}
+}
+
+.slider__item {
+    @media (min-width: $tablet-width) {}
+    @media (min-width: $desktop-width) {}
+}
+
+.slider__controls {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {}
+
+    @media (min-width: $desktop-width) {}
+}
+
+.slider__control {
+    width: 6px;
+    height: 6px;
+
+    background-color: $gray;
+    border-radius: 50%;
+
+    &--active {
+        width: 12px;
+        height: 12px;
+        background-color: $white;
+        border: 3px solid $primary;
+        
+
+    }
+
+    @media (min-width: $tablet-width) {}
+    @media (min-width: $desktop-width) {
+        @include pseudo();
+        top: -194px;
+
+        width: 22px;
+        height: 41px;
+
+        background-color: $white;
+
+        &--active {
+            display: none;
+        }
+
+        &--prev {
+            left: -437px;
+
+            background-image: url(../../img/svg/icon-review-arrow-left.svg);
+        }
+
+        &--next {
+            right: -437px;
+            
+            background-image: url(../../img/svg/icon-review-arrow-right.svg);
+        }
+    }
+}

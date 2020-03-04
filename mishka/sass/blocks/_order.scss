@@ -1,0 +1,762 @@
+.order {
+    padding-bottom: 55px;
+
+    @media (min-width: $tablet-width) {
+        margin-top: -44px;
+        padding-bottom: 1px;
+    }
+}
+
+
+
+
+
+.order__header {
+    margin-bottom: 23px;
+
+    @media (min-width: $tablet-width) {
+        border-top: 1px solid rgba(#000, 0.1);
+    }
+}
+
+
+
+
+
+.order__title {
+    @include font(27px, 30px, 700);
+
+    margin-bottom: 22px;
+    padding: 71px 30px 76px;
+
+    text-align: center;
+
+    background-color: #f1f1f1;
+
+    @media (min-width: $tablet-width) {
+        position: relative;
+
+        @include font(43px, 50px);
+
+        padding: 94px 30px 81px;
+        margin-bottom: 73px;
+
+        &::after {
+            @include pseudo();
+
+            bottom: -13px;
+            left: 0;
+
+            width: 768px;
+            height: 24px;
+
+            background: url(./../../img/svg/zigzag-fill.svg),
+                no-repeat,
+                0 0;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        @include font(53px, 57px);
+
+        padding-bottom: 111px;
+        margin-bottom: 114px;
+
+        &::after {
+            width: 1150px;
+            height: 34px;
+            background-image: url(./../../img/svg/zigzag-desktop.svg);
+        }
+    }
+}
+
+.order__text {
+    @include font(13px, 24px);
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media (min-width: $tablet-width) {
+        @include font(17px, 30px);
+
+        padding: 0 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding-left: 225px;
+        padding-right: 225px;
+    }
+}
+
+.order__form {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media (min-width: $tablet-width) {
+        padding: 0;
+    }
+}
+
+.order__form-inner {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &--type {
+        margin-bottom: 33px;
+    }
+
+    &--color {
+        margin-bottom: 32px;
+    }
+
+    &--introself {
+        margin-bottom: 32px;
+    }
+
+    &--contact,
+    &--mail  {
+        margin-bottom: 31px;
+    }
+
+    @media (min-width: $tablet-width) {
+        position: relative;
+
+        margin: 0;
+        padding: 0 50px;
+        padding-left: 167px;
+
+        &--type {
+            padding-top: 32px;
+            padding-bottom: 51px;
+            padding-left: 215px;
+        }
+
+        &--color {
+            padding: 47px 29px 26px 215px;
+
+            background-color: #f1f1f1;
+        }
+
+        &--introself {
+            padding-top: 48px;
+            padding-bottom: 50px;
+            padding-left: 217px;
+        }
+
+        &--contact {
+            padding-top: 50px;
+            padding-bottom: 10px;
+            padding-left: 217px;
+
+
+            background-color: #f1f1f1;
+        }
+
+        &--mail {
+            padding-top: 12px;
+            padding-bottom: 50px;
+            padding-left: 217px;
+
+
+            background-color: #f1f1f1;
+        }
+
+        &--desire {
+            padding: 0;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &--type,
+        &--color
+         {
+            padding-left: 224px;
+            padding-right: 139px;
+        }
+
+        &--introself {
+            padding-left: 225px;
+            padding-right: 225px;
+        }
+
+        &--contact {
+            padding-left: 225px;
+            padding-right: 225px;
+        }
+
+        &--mail {
+            padding-left: 225px;
+            padding-right: 225px;
+        }
+    }
+}
+
+.order__form-title {
+    position: relative;
+
+    display: block;
+
+    @include font(17px, 1, 700);
+
+    color: #63d1bb;
+    text-transorder: uppercase;
+
+    &::after {
+        @include pseudo();
+        left: 62px;
+        top: 50%;
+
+        width: 198px;
+        height: 1px;
+
+        background-color: #63d1bb;
+    }
+
+    &--type {
+        margin-bottom: 32px;
+    }
+
+    &--color {
+        margin-bottom: 25px;
+    }
+
+    &--introself {
+        margin-bottom: 30px;
+    }
+
+    &--contact,
+    &--mail  {
+        margin-bottom: 7px;
+    }
+
+    &--desire {
+        margin-bottom: 25px;
+    }
+
+    @media (min-width: $tablet-width) {
+        position: absolute;
+
+        left: 52px;
+
+        &::after {
+            display: none;
+        }
+
+        &--type {
+            top: 51px;
+        }
+
+        &--color,
+        &--contact,
+        &--desire{
+            top: 66px;
+        }
+
+        &--introself {
+            top: 67px;
+        }
+
+        &--mail {
+            top : 28px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &--type {
+            left: 114px;
+        }
+
+        &--color {
+            top: 64px;
+            left: 111px;
+        }
+
+        &--contact {
+            top: 67px;
+            left: 112px;
+        }
+
+        &--introself {
+            top: 67px;
+            left: 111px;
+        }
+
+        &--mail {
+            top: 30px;
+            left: 112px;
+        }
+
+        &--desire{
+            top: 67px;
+            left: 113px;
+        }
+    }
+}
+
+.order__form-list {
+    @media (min-width: $tablet-width) {
+        &--color {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+.order__form-item {
+    &--type + &--type {
+        margin-top: 12px;
+    }
+
+    &--color + &--color {
+        margin-top: 21px;
+    }
+
+    &--introself + &--introself {
+        margin-top: 22px;
+    }
+
+    &--introself {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: $tablet-width) {
+        &--color {
+            width: 50%;
+        }
+
+        &--introself {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &--type + &--type {
+            margin-top: 24px;
+        }
+
+        &--color + &--color {
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+
+        &--introself + &--introself {
+            margin-top: 23px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &--color {
+            width: 33.33333%;
+        }
+
+        &--color + &--color {
+            margin-bottom: 23px;
+        }
+    }
+}
+
+
+
+
+
+.order__form-radio,
+.order__form-checkbox {
+    display: none;
+}
+
+
+
+
+
+.order__form-radio {
+    &:checked + .order__form-label::after {
+        box-sizing: border-box;
+        background-color: $primary;
+        box-shadow:  inset 0 0 0 10px #fff;
+    }
+
+    @media (min-width: $tablet-width) {
+        &:checked + .order__form-label::after {
+            box-shadow:  inset 0 0 0 14px #fff;
+        }
+    }
+}
+
+
+
+
+
+.order__form-label {
+    @include font(17px, 18px, 700);
+
+    &:hover::after {
+        border-color: $primary;
+    }
+
+    &--accessory,
+    &--toy,
+    &--color {
+        position: relative;
+
+        display: block;
+        padding-left: 62px;
+
+        cursor: pointer;
+    }
+
+    &--accessory,
+    &--toy {
+        &::after {
+            @include pseudo();
+
+            width: 40px;
+            height: 40px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid #000;
+
+            transition: border .2s linear;
+        }
+    }
+
+    &--accessory::after {
+        top: -6px;
+        left: 0;
+    }
+
+    &--toy::after  {
+        top: 2px;
+        left: 0;
+    }
+
+    &--accessory {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    &--color {
+        &::after {
+            @include pseudo();
+
+            top: 0;
+            left: 0;
+
+            width: 40px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 2px solid #000;
+
+            transition: border .2s linear;
+        }
+    }
+
+    &--toy,
+    &--color {
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+
+    @media (min-width: $tablet-width) {
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1;
+
+        &--accessory,
+        &--toy {
+            padding-left: 82px;
+
+            &::after {
+                top: 2px;
+                left: 2px;
+
+                width: 52px;
+                height: 52px;
+            }
+        }
+
+        &--color {
+            padding-left: 82px;
+            &::after {
+                top: 2px;
+                left: 2px;
+
+                width: 54px;
+                height: 52px;
+            }
+        }
+
+        &--accessory,
+        &--toy,
+        &--color {
+            padding-top: 17px;
+            padding-bottom: 17px;
+        }
+    }
+}
+
+
+
+
+
+.order__form-checkbox {
+    &:checked + .order__form-label::before {
+        z-index: 1;
+
+        @include pseudo();
+        left: 9px;
+        top: 13px;
+
+        width: 22px;
+        height: 16px;
+
+        background-image: url(./../../img/svg/checkbox-mark-icon.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+
+    @media (min-width: $tablet-width) {
+        &:checked + .order__form-label::before {
+            left: 17px;
+            top: 22px;
+
+            width: 26px;
+            height: 18px;
+        }
+    }
+}
+
+.order__form-input,
+.order__textarea {
+    @include font(17px, 18px);
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 0;
+        padding-left: 17px;
+
+        @include font(19px, 19px);
+    }
+}
+
+.order__form-input {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    width: 100%;
+
+    border: none;
+    border-bottom: 2px solid #000;
+
+    transition: border .2s linear;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-bottom-color: $primary;
+    }
+
+    &--contact,
+    &--mail {
+        &:hover + .order__contact-icon,
+        &:focus + .order__contact-icon,
+        &:active + .order__contact-icon {
+            fill: $primary;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        padding-top: 12px;
+        padding-bottom: 13px;
+
+        &--text {
+            flex-grow: 1;
+            margin-left: 25px;
+        }
+
+        &--contact,
+        &--mail {
+            background-color: transparent;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        padding-bottom: 12px;
+    }
+}
+
+
+
+
+
+.order__wrapper-contact {
+    position: relative;
+}
+
+
+
+
+
+.order__contact-icon {
+    @include pseudo();
+
+    transition: fill .2s linear;
+
+    &:hover,
+    &:focus,
+    &:active {
+        fill: $primary;
+    }
+
+    &--tel {
+        top: 11px;
+        right: 8px;
+    }
+
+    &--email {
+        top: 16px;
+        right: 4px;
+    }
+
+
+    @media (min-width: $tablet-width) {
+        &--tel {
+            right: 26px;
+        }
+
+        &--email {
+            right: 22px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &--tel {
+            right: 8px;
+            top: 9px;
+        }
+
+        &--email {
+            right: 4px;
+            top: 14px;
+        }
+    }
+}
+
+
+.order__wrapper-textarea {
+    @media (min-width: $tablet-width) {
+        margin-left: 217px;
+        margin-right: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: 225px;
+        margin-right: 225px;
+    }
+
+}
+
+
+.order__textarea {
+    width: 100%;
+    padding: 14px;
+    padding-bottom: 18px;
+    margin-bottom: 14px;
+
+    box-sizing: border-box;
+    border: 2px solid #000;
+
+    resize: none;
+
+    transition: border .2s linear;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $primary;
+    }
+
+    @media (min-width: $tablet-width) {
+        padding-bottom: 12px;
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 46px;
+    }
+}
+
+
+.order__wrapper-btn {
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding-left: 225px;
+        padding-right: 225px;
+    }
+}
+
+
+
+
+
+.order__text-bottom {
+    @include font(14px, 16px);
+
+    margin-bottom: 31px;
+
+    color: $colorLine;
+    letter-spacing: -.1px;
+
+    @media (min-width: $tablet-width) {
+        @include font(17px, 30px);
+
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+.order__btn {
+    @include font(18px, 20px, 700);
+
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    border: 2px solid $colorLine;
+    letter-spacing: -.5px;
+
+
+    transition: background .2s linear,
+                color .2s linear;
+
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $colorLine;
+    }
+
+    &:active {
+        color: darken($white, 30%);
+    }
+
+    @media (min-width: $tablet-width) {
+        width: 230px;
+    }
+}

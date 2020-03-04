@@ -1,0 +1,131 @@
+.main-nav {
+    position: relative;
+    padding-bottom: 56px;
+
+    &--closed .main-nav__toggle {
+        &::before {
+            @include pseudo();
+
+            top: 0;
+            left: 0;
+
+            width: 23px;
+            height: 4px;
+
+            background-color: #fff;
+            box-shadow: 0 8px 0 0 #fff, 0 16px 0 0 #fff;
+        }
+    }
+
+    &--opened .main-nav__toggle {
+        top: 16px;
+
+        &::before,
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 9px;
+            left: -3px;
+
+            width: 30px;
+            height: 3px;
+
+            background-color: #fff;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            box-shadow: none;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+}
+
+
+
+.main-nav--closed .site-list__item {
+    @media (max-width: $tablet-width-only) {
+        display: none;
+    }
+}
+
+
+.main-nav__toggle {
+        position: absolute;
+        bottom: 18px;
+        right: 20px;
+
+        width: 23px;
+        height: 21px;
+
+        cursor: pointer;
+        border: none;
+
+        background-color: transparent;
+
+        @media (min-width: $tablet-width) {
+            display: none;
+        }
+}
+
+
+
+.main-nav__logo {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    display: block;
+
+    z-index: 10;
+
+    @media (min-width: $tablet-width) {
+        top: 0;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+
+.main-nav__list {
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $tablet-width) {}
+
+    @media (min-width: $desktop-width) {}
+}
+
+
+.main-nav--nojs {
+    display: flex;
+    flex-direction: column;
+
+    .main-nav__logo {
+        order: 2;
+    }
+
+    @media (min-width: $tablet-width) {}
+
+    @media (min-width: $desktop-width) {}
+}
+
+
+
+.main-nav img {
+    @media (min-width: $desktop-width) {
+        width: 188px;
+        height: 96px;
+    }
+}

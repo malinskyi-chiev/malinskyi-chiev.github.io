@@ -1,0 +1,249 @@
+.catalog {
+    @media (min-width: $tablet-width) {
+        margin-top: -44px;
+    }
+}
+
+.catalog__header {
+    padding-top: 71px;
+    padding-bottom: 76px;
+
+    background-color: #f1f1f1;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+        padding-top: 95px;
+        padding-bottom: 106px;
+
+        border-top: 1px solid $secondary;
+    }
+}
+
+.catalog__title {
+    @include font(27px, 30px);
+
+    @media (min-width: $tablet-width) {
+        @include font(43px, 50px);
+
+
+    }
+
+    @media (min-width: $desktop-width) {
+        @include font(53px, 57px);
+    }
+}
+
+.catalog__cards {
+    position: relative;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+
+    @media (min-width: $tablet-width) {
+        padding-top: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        &::after {
+            @include pseudo();
+
+            top: -11px;
+            left: 0;
+
+            width: 768px;
+            height: 24px;
+
+            background: url(./../../img/svg/zigzag-fill.svg),
+                no-repeat,
+                0 0;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 125px;
+
+
+        &::after {
+            top: -20px;
+
+            width: 1150px;
+            height: 34px;
+
+            background-image: url(./../../img/svg/zigzag-desktop.svg);
+        }
+    }
+}
+
+.catalog__card {
+    margin: 0;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 54px;
+    }
+
+    @media (min-width: $desktop-width) {
+        flex-direction: column;
+
+        margin-bottom: 57px;
+
+        &:hover > .catalog__card-body,
+        &:focus > .catalog__card-body {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        &:active > .catalog__card-body{
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.catalog__card-link {
+    display: block;
+}
+
+.catalog__card-img {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+        width: 334px;
+        height: 334px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 316px;
+        height: 462px;
+    }
+}
+
+.catalog__card-body {
+    padding: 26px 27px 26px;
+
+    box-sizing: border-box;
+
+    border: 1px solid $secondary;
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: column;
+        width: 335px;
+        padding-top: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 316px;
+    }
+}
+
+.catalog__card-title {
+    @include font(17px, 24px, 700);
+
+    margin-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+            font-size: 20px;
+    }
+}
+
+.catalog__card-text {
+    position: relative;
+
+    @include font(13px, 30px);
+
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+
+    &::after {
+        @include pseudo();
+
+        top: 49px;
+        left: 0;
+
+        width: 204px;
+        height: 1px;
+
+        background-color: $secondary;
+    }
+
+    @media (min-width: $tablet-width) {
+        font-size: 15px;
+
+        &::after {
+            top: 205px;
+            left: 0;
+
+            width: 268px;
+        }
+
+        &--toys {
+            &::after{
+                top: 181px;
+            }
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 41px;
+
+        &::after {
+            top: 68px;
+        }
+
+        &--toys {
+            margin-bottom: 17px;
+
+            &::after{
+                top: 44px;
+            }
+        }
+    }
+}
+
+.catalog__card-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+
+    @media (min-width: $tablet-width) {
+        margin-left: 5px;
+        margin-right: 4px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.catalog__card-price-item {
+    @include font(15px, 24px, 700);
+
+    @media (min-width: $tablet-width) {
+        font-size: 17px;
+    }
+}
+
+.catalog__card-icon {
+    opacity: .3;
+
+    transition: opacity .2s linear,
+                fill .2s linear;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+        fill: $primary;
+    }
+
+    &:active {
+        opacity: .3;
+        fill: $primary;
+    }
+}

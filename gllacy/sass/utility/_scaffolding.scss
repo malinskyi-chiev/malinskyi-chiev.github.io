@@ -1,0 +1,157 @@
+
+html {
+    font-size: 62.5%;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: $sans-serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+.bg {
+    min-width: 1200px;
+    background-color: #849d8f;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.visually-hidden:not(:focus),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="file"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 0;
+
+    font-family: $sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.33333333;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+
+    border-radius: 20px;
+    background-image: linear-gradient(#f26843, #e74b36);
+    border: none;
+    box-shadow: 0 1px 2px #ac1000;
+
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background-image: linear-gradient(#f58669, #ec6f5e);
+    box-shadow: 0 2px 2px #ac1000;
+}
+
+.btn:active {
+    color: #fceeec;
+
+    background-image: linear-gradient(#d74632, #e1613e);
+    box-shadow: inset 0 2px 2px #942718;
+}
+
+.page-header {
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
+.form-group {
+    position: relative;
+    margin: 0 0 20px 0;
+    height: 44px;
+}
+
+.field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+
+    width: 100%;
+    min-height: 24px;
+    padding: 10px 14px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: inherit;
+    color: #323232;
+
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: inset 0 0 0 1px rgb(211, 211, 210);
+}
+
+.field:hover {
+    box-shadow: inset 0 0 0 2px #999999;
+}
+
+.field:focus {
+    box-shadow: inset 0 0 0 2px #5b9ddf;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.field + label {
+    position: absolute;
+    top: 11px;
+    left: 14px;
+
+    color: #999999;
+
+    pointer-events: none;
+}
+
+.field:focus + label {
+    color: #5b9ddf;
+}
+
+.field:focus + label,
+.field:required:valid + label {
+    top: -14px;
+
+    font-size: 11px;
+    line-height: 11px;
+}

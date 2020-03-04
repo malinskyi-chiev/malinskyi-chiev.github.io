@@ -1,0 +1,380 @@
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 auto;
+
+    background-color: $white;
+
+    @media (max-width: $mobile-width-only) {
+        position: relative;
+    }
+
+    &--closed .main-nav__toggle {
+        &::before {
+            @include pseudo();
+
+            top: 0;
+            left: 0;
+
+            width: 23px;
+            height: 4px;
+
+            background-color: #000;
+            box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000;
+        }
+    }
+
+    &--opened .main-nav__toggle {
+        top: 27px;
+
+        &::before,
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 9px;
+            left: -3px;
+
+            width: 30px;
+            height: 3px;
+
+            background-color: #000;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            box-shadow: none;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 668px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 1050px;
+    }
+}
+
+
+.main-nav--closed .main-nav__item {
+    @media (max-width: $mobile-width-only) {
+        display: none;
+    }
+}
+
+.main-nav__toggle {
+    position: absolute;
+    bottom: 29px;
+    right: 20px;
+
+    width: 23px;
+    height: 21px;
+
+    cursor: pointer;
+    border: none;
+
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+}
+
+
+.main-nav__main-logo {
+    position: relative;
+
+    padding-top: 22px;
+    padding-bottom: 22px;
+    width: 86px;
+    height: 35px;
+
+    align-self: center;
+
+    @media (min-width: $tablet-width) {
+        width: 113px;
+        height: 46px;
+        order: 1;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 149px;
+        height: 72px;
+        order: 2;
+    }
+}
+
+
+
+
+
+.main-nav__main-logo {
+    transition: opacity .2s linear;
+
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+
+
+
+
+.main-nav__main-logo img {
+    display: block;
+}
+
+
+
+
+
+.main-nav__list {
+    @include font(17px, 24px, 700);
+
+    &--arrivals {
+        display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: row;
+
+        z-index: 10;
+
+        &--search {
+            order: 2;
+            margin-left: auto;
+            align-items: center;
+
+        }
+
+        &--catalog {
+            order: 3;
+        }
+
+        &--arrivals {
+            display: none;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &--arrivals {
+            display: flex;
+            order: 4;
+        }
+
+        &--search {
+            order: 3;
+        }
+
+        &--catalog {
+            order: 1;
+            margin-right: 75px;
+            align-items: center;
+        }
+    }
+}
+
+
+
+
+
+.main-nav__item {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border-bottom: 1px solid #ececec;
+
+    &--catalog:first-child {
+        border-top: 1px solid #ececec;
+    }
+
+    @media (min-width: $tablet-width) {
+        padding-left: 0;
+        padding-right: 0;
+
+        border-bottom: none;
+
+        &--catalog {
+            @include font(15px , 24px);
+
+            padding-top: 20px;
+        }
+
+        &--catalog:first-child {
+            border-top: none;
+        }
+
+        &--catalog + &--catalog {
+            margin-left: 37px;
+        }
+        &--search {
+            padding: 36px 31px 33px 33px;
+
+            border-left: 1px solid #ececec;
+            border-right: 1px solid #ececec;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &--catalog {
+            @include font(17px, 24px);
+
+            padding-top: 32px;
+            padding-bottom: 30px;
+        }
+
+        &--catalog + &--catalog {
+            margin-left: 35px;
+            padding-left: 34px;
+
+            border-left: 1px solid #ececec;
+        }
+
+        &--arrivals {
+            @include font(15px, 24px);
+
+            padding-top: 20px;
+        }
+
+        &--arrivals + &--arrivals {
+            padding-left: 61px;
+        }
+    }
+}
+
+
+
+.main-nav__link {
+    position: relative;
+
+    display: block;
+
+    padding-left: 46px;
+    padding-top: 29px;
+    padding-bottom: 27px;
+
+    transition: opacity .2s linear,
+                color .2s linear;
+
+    &:hover {
+        opacity: .6;
+    }
+
+    &:active {
+        opacity: .3;
+    }
+
+    &:hover > .main-nav__icon {
+        opacity: 1;
+        
+        fill: $primary;
+    }
+
+    &:active > .main-nav__icon {
+        opacity: .3;
+    }
+
+    @media (min-width: $tablet-width) {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &--catalog {
+            padding-left: 0;
+        }
+
+        &--cart {
+            padding-left: 83px;
+        }
+
+        &--search {
+            display: flex;
+            padding: 0;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &--arrivals {
+            padding-left: 0;
+        }
+
+        &--catalog {
+            display: inline-block;
+        }
+    }
+}
+
+
+
+.main-nav__icon {
+    @include сentering-y();
+
+    left: 0;
+
+    opacity: .3;
+
+    transition: opacity .2s linear,
+                fill .2s linear;
+
+
+    @media (min-width: $tablet-width) {
+        &--search {
+            position: static;
+
+            transform: translateY(0);
+        }
+
+        &--cart {
+            left: 31px;
+        }
+
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+
+
+.main-nav__text-hidden {
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+
+
+.main-nav__delivery {
+    display: none;
+
+    z-index: 10;
+
+    @media (min-width: $tablet-width) {
+        @include font(15px, 24px);
+
+        display: block;
+        order: 4;
+        margin-left: auto;
+        padding-top: 20px;
+    }
+
+    @media (min-width: $desktop-width) {}
+}

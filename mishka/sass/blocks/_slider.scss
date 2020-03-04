@@ -1,0 +1,90 @@
+
+.slider__wrapper-toggles {
+
+    @media (min-width: $tablet-width) {
+        @include pseudo();
+
+        right: 69px;
+        bottom: 18px;
+    }
+    @media (min-width: $tablet-width) {
+        right: 0;
+    }
+}
+
+.slider__toggles {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 36px;
+
+    border: 1px solid $secondary;
+
+    &::before {
+        @include pseudo();
+
+        top: 0;
+        left: 50%;
+
+        width: 1px;
+        height: 52px;
+
+        background-color: $secondary;
+
+        transform: translateX(-50%);
+    }
+
+    @media (min-width: $tablet-width) {
+        width: 137px;
+        order: 4;
+        margin-left: auto;
+        margin-bottom: -5px;
+        margin-right: 69px;
+
+
+        border: none;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-right: 19px;
+    }
+}
+
+.slider__toggle {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    flex-basis: 50%;
+
+    &:hover > .slider__svg,
+    &:focus > .slider__svg {
+        opacity: 0.6;
+    }
+
+    &:active > .slider__svg {
+        opacity: 0.3;
+    }
+
+    @media (min-width: $tablet-width) {
+        padding: 0;
+        flex-basis: auto;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.slider__svg {
+    width: 50px;
+    height: 26px;
+
+    transition: opacity .2s linear;
+
+    @media (min-width: $tablet-width) {}
+    @media (min-width: $desktop-width) {}
+}
