@@ -585,7 +585,7 @@ var sortByCategory = function sortByCategory(evt) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadDatabase", function() { return loadDatabase; });
 var loadDatabase = function loadDatabase(handler, filter) {
-  fetch('./panda-express/db/db.json').then(function (response) {
+  fetch('./db/db.json').then(function (response) {
     return response.json();
   }).then(filter).then(handler);
 };
