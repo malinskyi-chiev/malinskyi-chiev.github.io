@@ -585,7 +585,12 @@ var sortByCategory = function sortByCategory(evt) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadDatabase", function() { return loadDatabase; });
 var loadDatabase = function loadDatabase(handler, filter) {
-  fetch('./db/db.json').then(function (response) {
+  fetch('https://api.jsonbin.io/b/5eb6a80c47a2266b14757baa', {
+    method: 'GET',
+    headers: {
+      'secret-key': '$2b$10$vLDy18aMFVYkLtzzRV14SeXiRWWkQm5bfBDkTW4jlrljQlK/SeHL6'
+    }
+  }).then(function (response) {
     return response.json();
   }).then(filter).then(handler);
 };
