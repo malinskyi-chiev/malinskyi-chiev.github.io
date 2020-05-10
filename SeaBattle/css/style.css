@@ -1,0 +1,116 @@
+html {
+  font-family: "Fira Sans", Arial, sans-serif;
+}
+
+body {
+  color: #fff;
+  background-color: #171919;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+h3,
+a {
+  letter-spacing: 3px;
+}
+
+
+.wrap {
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrap div {
+  display: flex;
+  justify-content: space-between;
+}
+ 
+table {  
+  margin-right: auto;
+  margin-left: auto;
+
+  border-collapse: collapse;
+  border: 2px solid #333;
+
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+td {
+  border: 2px solid #333;
+  empty-cells: show;
+  padding: 30px;
+}
+
+a {
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid red;
+  color: red;
+}
+
+.miss {
+  position: relative;
+}
+
+.miss::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #9ACD32;
+}
+
+.hit {
+  position: relative;
+}
+
+.hit::after {  
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/close.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.dead {
+  position: relative;
+}
+
+.dead::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 24px;
+  height: 30px;
+  background-image: url(../img/sk.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
